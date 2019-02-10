@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button (click)="vericek()" ion-button>veri çek</button>
+  <ion-list *ngIf="veriler">
+    <ion-item *ngFor="let veri of veriler">
+      <ion-label> {{veri.title}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

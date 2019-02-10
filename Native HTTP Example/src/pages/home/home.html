@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-list>
+
+    <button *ngFor="let veri of veriler" (click)="ilegit(veri)" ion-item>{{veri.il}}</button>
+
+  </ion-list>
+
+
+</ion-content>

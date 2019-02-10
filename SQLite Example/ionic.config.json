@@ -1,0 +1,7 @@
+{
+  "name": "databasedeneme",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

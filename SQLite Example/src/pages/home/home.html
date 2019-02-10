@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button><ion-icon name="menu" menuToggle></ion-icon></button>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<button (click)="toastDeneme('Toast deneme')" ion-button>Toast deneme </button>
+<button (click)="createDb()" ion-button>Veritabanı oluşturma </button>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Öğrencinin Adı</ion-label>
+    <ion-input [(ngModel)]="ogradi"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Numarası</ion-label>
+    <ion-input  [(ngModel)]="ogrno"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Sınıfı</ion-label>
+    <ion-input [(ngModel)]="ogrsinif"></ion-input>
+  </ion-item>
+  <button (click)="addData()" ion-button>Kaydet</button>
+  <button (click)="getData()" ion-button>Veri sayısı</button>
+</ion-list>
+<ion-list >
+  <ion-item *ngFor="let a of ogrenciler">
+    <p>{{a.name}} </p>
+    <p>{{a.no}}</p>
+    <p>{{a.sinif}}</p>
+    <button (click)="deleteData(a.name)"  ion-button>Sil</button>
+  </ion-item>
+</ion-list>
+
+</ion-content>
